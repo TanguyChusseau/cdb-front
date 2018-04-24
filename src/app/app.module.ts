@@ -12,6 +12,7 @@ import { CompanyGetByAllComponent } from './company-get-by-all/company-get-by-al
 import { CompanyGetAllComponent } from './company-getAll/company-get-all.component';
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { CompanyUpdateComponent } from './company-update/company-update.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CompanyUpdateComponent } from './company-update/company-update.componen
     CompanyUpdateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [CompanyService],
   bootstrap: [AppComponent]
