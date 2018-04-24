@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompanyGetAllComponent } from './company-get-all.component';
+import { CompanyGetAllComponent } from './company-getAll.component';
 
 describe('CompanyGetAllComponent', () => {
   let component: CompanyGetAllComponent;

@@ -1,32 +1,41 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Company } from './model/company.model';
-import { HttpClient } from '@angular/common/http';
+import { Map, Catch, Throw } from 'rxjs/operator';
+import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class CompanyService {
 
-  private companyUrl = 'api/recipes';
+  private companyUrl = 'http://localhost:8080/web/companies';
+  private headers = new HttpHeaders({'Content-Type': 'application/json'});
+
   constructor(private http: HttpClient) {
   }
 
-  public getAll<T>(): Observable<Company[]> {
-    return this.http.get<Company[]>(this.companyUrl);
+  public errorHandler(error: HttpResponse) {
+    return Observable.throw(error || 'SERVER ERROR');
   }
 
-  public getById<T>(id: number): Observable<Company> {
-    return this.http.get<Company>(`${ this.companyUrl }/${ id }`);
+  public getAll(): Observable<Company[]> {
+    return this.http.get<Company[]>(this.companyUrl).map((response: HttpResponse) => response.body).catch(this.errorHandler);
   }
 
-  public add<T>(name: string): Observable<Company> {
-    return this.http.post<Company>(this.companyUrl, name);
+  public getById(id: number): Observable<Company> {
+    return this.http.get<Company>(`${ this.companyUrl }/${ id }`)
+      .map((response: HttpResponse) => response.body).catch(this.errorHandler);
   }
 
-  public update<T>(id: number, company: Company): Observable<Company> {
-    return this.http.put(`${ this.companyUrl }/${ id }`, company);
+  public add(company: Company): Observable<Company> {
+    return this.http.post<Company>(this.companyUrl, JSON.stringify(company));
   }
 
-  delete<T>(id: number): Observable<Company> {
-    return this.http.delete<Company>(`${ this.companyUrl }/${ id }`);
+  public update(id: number, company: Company): Observable<Company> {
+    return this.http.put(`${ this.companyUrl }/${ id }`, JSON.stringify(company));
+  }
+
+  delete(id: number): Observable<Company> {
+    return this.http.delete<Company>(`${ this.companyUrl }/${ id }`)
+      .map((response: HttpResponse) => response.body).catch(this.errorHandler);
   }
 }
