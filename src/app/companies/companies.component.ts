@@ -4,8 +4,8 @@ import { Company } from '../model/company.model';
 
 @Component({
   selector: 'app-recipes',
-  templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.scss']
+  templateUrl: './companies.component.html',
+  styleUrls: ['./companies.component.scss']
 })
 export class CompaniesComponent implements OnInit {
 
