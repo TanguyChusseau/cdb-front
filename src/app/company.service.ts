@@ -22,7 +22,7 @@ export class CompanyService {
     return this.http.post<Company>(this.companyUrl, name);
   }
 
-  public update<T>(id: number, company: Company): Observable<Company> {
+  public update<T>(id: number, company: Company): Observable<any> {
     return this.http.put(`${ this.companyUrl }/${ id }`, company);
   }
 
