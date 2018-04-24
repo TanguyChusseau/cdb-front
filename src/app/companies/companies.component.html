@@ -1,5 +1,5 @@
-<div class="container">
-  <div *ngFor="let company of companies">
+<div class="main-container">
+  <ul *ngFor="let company of companies">
     <app-company [company]="company" (delete)="deletedCompany($event)"></app-company>
-  </div>
+  </ul>
 </div>

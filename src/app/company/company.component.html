@@ -1,13 +1,39 @@
-<div class="main-container">
-        <div class="title-recipe">
-          <h3> {{ company.name }} </h3>
-        </div>
+<mat-card *ngIf="company" class="flex-container">
+  <mat-card-header>
+    <ul class="flex-container">
+      <mat-card-title>
 
-    <div class="addLink">
-      <button routerLink="/companies/{{ company.id }}">see more</button>
-    </div>
+          {{company.name}}
+      </mat-card-title>
+    </ul>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      <a routerLink="/companies/{{company.id}}"> Display Details </a>
+    </p>
+  </mat-card-content>
+  <mat-card-content>
+    <mat-card-subtitle>
+      <div *ngIf="isExpanded">
+        <ul>
+          <li>
+            {{ company.id }}
+          </li>
+          <li>
+            {{ company.name }}
+          </li>
+        </ul>
+      </div>
+    </mat-card-subtitle>
+  </mat-card-content>
 
-    <div class="addLink">
-        <button (click)="deleteCompany()">delete</button>
-    </div>
-</div>
+  <mat-card-actions>
+    <button mat-button color="#C5BFB6" (click)="toggleExpand()">
+      <span *ngIf="!isExpanded"> See more </span>
+      <span *ngIf="isExpanded"> See less </span>
+    </button>
+    <button mat-button color="#C5BFB6" (click)="deleteCompany()">
+      <span> Delete </span>
+    </button>
+  </mat-card-actions>
+</mat-card>
