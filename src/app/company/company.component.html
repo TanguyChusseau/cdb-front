@@ -1,3 +1,13 @@
-<p>
-  company works!
-</p>
+<div class="main-container">
+        <div class="title-recipe">
+          <h3> {{ company.name }} </h3>
+        </div>
+
+    <div class="addLink">
+      <button routerLink="/companies/{{ company.id }}">see more</button>
+    </div>
+
+    <div class="addLink">
+        <button (click)="deleteCompany()">delete</button>
+    </div>
+</div>

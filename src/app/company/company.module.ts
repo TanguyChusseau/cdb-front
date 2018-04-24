@@ -7,10 +7,11 @@ import { CompanyComponent } from './company.component';
 import { CompaniesComponent } from '../companies/companies.component';
 import { CompanyGetByIdComponent } from '../company-getById/company-getById.component';
 import { CompanyAddComponent } from '../company-add/company-add.component';
+import { CompanyUpdateComponent } from '../company-update/company-update.component';
 
 @NgModule({
   imports: [
-    CommonModule,
+  CommonModule,
     CustomMaterialModule,
     RouterModule,
     FormsModule
@@ -20,6 +21,7 @@ import { CompanyAddComponent } from '../company-add/company-add.component';
     CompaniesComponent,
     CompanyGetByIdComponent,
     CompanyAddComponent,
+    CompanyUpdateComponent,
   ]
 })
 

@@ -1,3 +1,5 @@
-<p>
-  companies works!
-</p>
+<div class="container">
+  <div *ngFor="let company of companies">
+    <app-company [company]="company" (delete)="deletedCompany($event)"></app-company>
+  </div>
+</div>
