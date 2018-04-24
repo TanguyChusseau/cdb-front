@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { CompanyComponent } from './company/company.component';
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { CompanyGetByIdComponent } from './company-getById/company-getById.component';
 import { CompanyUpdateComponent } from './company-update/company-update.component';
 
 const routes: Routes = [
   {
-    path: 'company',
-    component: CompanyComponent,
+    path: 'companies',
+    component: CompaniesComponent,
     pathMatch: 'full'
   },
   {
-    path: 'company/:id',
+    path: 'companies/:id',
     component: CompanyGetByIdComponent,
     pathMatch: 'full'
   },
@@ -29,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'company',
+    redirectTo: 'companies',
     pathMatch: 'full'
   }
 ];

@@ -14,12 +14,13 @@ export class CompanyAddComponent implements OnInit {
   constructor(private companyService: CompanyService, private router: Router) { }
 
   ngOnInit() {
+    this.add();
   }
 
   add() {
-    this.companyService.add(this.company.name)
-      .subscribe(() => this.router.navigate(['Companies']), error => console.error(error))
-
+    this.companyService.addCompany(this.company)
+      .subscribe(() => this.router.navigate(['Companies']),
+          error => console.error(error));
   }
 
 }

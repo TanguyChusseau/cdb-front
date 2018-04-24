@@ -21,20 +21,20 @@ export class CompanyService {
     return this.http.get<Company[]>(this.companyUrl).map((response: HttpResponse) => response.body).catch(this.errorHandler);
   }
 
-  public getById(id: number): Observable<Company> {
+  public getById(id: string): Observable<Company> {
     return this.http.get<Company>(`${ this.companyUrl }/${ id }`)
       .map((response: HttpResponse) => response.body).catch(this.errorHandler);
   }
 
-  public add(company: Company): Observable<Company> {
+  public addCompany(company: Company): Observable<Company> {
     return this.http.post<Company>(this.companyUrl, JSON.stringify(company));
   }
 
-  public update(id: number, company: Company): Observable<Company> {
+  public updateCompany(id: number, company: Company): Observable<Company> {
     return this.http.put(`${ this.companyUrl }/${ id }`, JSON.stringify(company));
   }
 
-  delete(id: number): Observable<Company> {
+  public deleteCompany(id: number): Observable<Company> {
     return this.http.delete<Company>(`${ this.companyUrl }/${ id }`)
       .map((response: HttpResponse) => response.body).catch(this.errorHandler);
   }

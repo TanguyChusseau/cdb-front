@@ -10,6 +10,7 @@ import { CompanyGetAllComponent } from './company-getAll/company-getAll.componen
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { CompanyUpdateComponent } from './company-update/company-update.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { CompaniesComponent } from './companies/companies.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './/app-routing.module';
     CompanyGetByIdComponent,
     CompanyGetAllComponent,
     CompanyAddComponent,
-    CompanyUpdateComponent
+    CompanyUpdateComponent,
+    CompaniesComponent
   ],
   imports: [
     BrowserModule,

@@ -13,15 +13,15 @@ export class CompanyComponent {
   @Input() company: Company;
   @Output() deletedCompany: EventEmitter<Company> = new EventEmitter();
 
-  constructor(private recipeService: CompanyService) {
+  constructor(private companyService: CompanyService) {
   }
 
   toggleExpand(): void {
     this.isExpanded = !this.isExpanded;
   }
 
-  deleteRecipe(): void {
-    this.recipeService.delete(this.company.id)
+  deleteCompany(): void {
+    this.companyService.deleteCompany(this.company.id)
       .subscribe(() => this.deletedCompany.emit(this.company));
   }
 
