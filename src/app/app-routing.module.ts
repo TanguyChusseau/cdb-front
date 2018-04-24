@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { CompaniesComponent } from './companies/companies.component';
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { CompanyGetByIdComponent } from './company-getById/company-getById.component';
 import { CompanyUpdateComponent } from './company-update/company-update.component';

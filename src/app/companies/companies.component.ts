@@ -7,7 +7,7 @@ import { Company } from '../model/company.model';
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.scss']
 })
-export class RecipesComponent implements OnInit {
+export class CompaniesComponent implements OnInit {
 
   companies: Company[];
 
@@ -20,7 +20,7 @@ export class RecipesComponent implements OnInit {
   getAll(): void {
     this.companyService.getAll()
       .subscribe(companies => this.companies = companies,
-        () => console.error('An error occured executing the program'));
+        error => console.error(error));
   }
 
   deletedCompany(company: Company) {
