@@ -4,14 +4,13 @@
       <i class="material-icons" routerLink="/companies">desktop_mac</i>
     </button> Company Database
   </h1>
-
   <button class="add-button-container">
     <i class="material-icons" routerLink="/companies/add">add_circle</i>
   </button>
-
 </div>
 <mat-list class="main-container" *ngFor="let company of companies">
   <div>
+    <i class="material-icons">domain</i>
     <app-company [company]="company"></app-company>
   </div>
 </mat-list>
