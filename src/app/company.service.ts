@@ -25,7 +25,7 @@ headers: new HttpHeaders({'Content-Type': 'application/json'})
   }
 
   public addCompany(company: Company): Observable<Company> {
-    return this.http.post<Company>(this.companyUrl, JSON.stringify(company));
+    return this.http.post<Company>(this.companyUrl, company, this.httpOptions);
   }
 
   public updateCompany(company: Company): Observable<Company> {
