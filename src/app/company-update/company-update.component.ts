@@ -20,10 +20,11 @@ export class CompanyUpdateComponent implements OnInit {
 
   getCompany() {
     this.companyService.getById(this.route.snapshot.paramMap.get('id'))
-    .subscribe(company => this.company = company, () => alert('receipe not found'));
+    .subscribe(company => this.company = company, () => alert('Company not found'));
   }
-  update() {
-    this.companyService.updateCompany(this.company).subscribe(() => this.router.navigate(['/companies']));
+
+  updateCompany() {
+    this.companyService.updateCompany(this.company).subscribe(() => this.router.navigate(['companies']));
   }
 
 }

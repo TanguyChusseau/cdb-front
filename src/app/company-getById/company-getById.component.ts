@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../model/company.model';
 import { CompanyService } from '../company.service';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-company-get-by-id',
@@ -12,7 +12,7 @@ export class CompanyGetByIdComponent implements OnInit {
 
   company: Company;
 
-  constructor(private companyService: CompanyService, private route: ActivatedRoute) { }
+  constructor(private companyService: CompanyService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.getById();
@@ -21,6 +21,12 @@ export class CompanyGetByIdComponent implements OnInit {
   getById(): void {
     this.companyService.getById(this.route.snapshot.paramMap.get('id'))
       .subscribe(company => this.company = company, error => console.error(error));
+  }
+
+  deleteCompany(): void {
+    this.companyService.deleteCompany(this.company.id)
+      .subscribe(() => this.router.navigate(['companies']),
+        error => console.error(error));
   }
 
 }

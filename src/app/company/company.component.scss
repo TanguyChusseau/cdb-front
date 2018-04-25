@@ -1,24 +1,13 @@
 .card-container {
+  align-items: center;
   width: 500px;
-  height: 100px;
-  align-self: center;
-  align-items: left;
+  height: 30px;
   background-color: #ECEFF1;
 }
 
 .title-container {
   background-color: #607D8B;
   font-family: Cantarell;
-}
-
-.flex-container {
-  width: 100px;
-  height: 20px;
-  align-items: center;
-  background-color: #546E7A;
-  font-style: italic;
-}
-
-.button-container {
-  background-color: #90A4AE;
+  align-self: center;
+  justify-content: center;
 }
