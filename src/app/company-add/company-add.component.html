@@ -1,11 +1,18 @@
-<form [formGroup]="companyAddFormGroup">
-  <div class="form-group">
-    <label class="center-block">Name:
-      <input class="form-control" formControlName="name" [(ngModel)]="company.name">
-    </label>
-  </div>
-</form>
+<div>
+  <button class="button-container">
+    <i class="material-icons" routerLink="/companies">home</i>
+  </button>
+  <h1 class="title-container">
+    Create a new Company
+  </h1>
+</div>
+<div class="main-container">
+  <form [formGroup]="companyAddFormGroup">
+    <span class="form-control-container">Enter the company's name</span>
+    <input class="form-control-container" formControlName="name" [(ngModel)]="company.name">
+  </form>
+  <button class="validation-button-container" [disabled]="!companyAddFormGroup.valid" (click)="submitMethod()">
+    <i class="material-icons">done</i>
+  </button>
+</div>
 
-<button [disabled]="!companyAddFormGroup.valid" (click)="submitMethod()">
-  <i class="material-icons">done</i>
-</button>
