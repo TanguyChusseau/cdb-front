@@ -4,10 +4,15 @@
         </div>
 
     <div class="addLink">
-      <button routerLink="/companies/{{ company.id }}">see more</button>
+      <button routerLink="/companies/update/{{ company.id }}">update</button>
     </div>
 
     <div class="addLink">
         <button (click)="deleteCompany()">delete</button>
     </div>
+
+    <div class="addLink">
+      <button routerLink="/companies/{{ company.id }}">see more</button>
+    </div>
+
 </div>
