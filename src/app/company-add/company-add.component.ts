@@ -11,7 +11,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 })
 export class CompanyAddComponent implements OnInit {
 
-  companyAddFormGroup: FormGroup;
+  //companyAddFormGroup: FormGroup;
   company: Company = new Company();
   constructor(private companyService: CompanyService, private route: ActivatedRoute, private router: Router, private fb: FormBuilder) { }
 
