@@ -1,5 +1,7 @@
-<div class="main-container">
-  <ul *ngFor="let company of companies">
-    <app-company [company]="company" (delete)="deletedCompany($event)"></app-company>
-  </ul>
-</div>
+<mat-list class="main-container" *ngFor="let company of companies">
+  <p class="button-container">
+    <a routerLink="/companies/{{company.id}}"> Display Details </a>
+  </p>
+  <app-company [company]="company" (delete)="deletedCompany($event)"> </app-company>
+</mat-list>
+

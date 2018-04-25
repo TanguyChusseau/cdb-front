@@ -1,9 +1,24 @@
-.flex-container {
-  width: fit-content;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
+.card-container {
+  width: 500px;
+  height: 100px;
+  align-self: center;
+  align-items: left;
+  background-color: #ECEFF1;
 }
-body {
-  background-color: #151517;
+
+.title-container {
+  background-color: #607D8B;
+  font-family: Cantarell;
+}
+
+.flex-container {
+  width: 100px;
+  height: 20px;
+  align-items: center;
+  background-color: #546E7A;
+  font-style: italic;
+}
+
+.button-container {
+  background-color: #90A4AE;
 }
