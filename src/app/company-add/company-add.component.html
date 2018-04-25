@@ -2,14 +2,15 @@
   company-add works!
 </p>
 
-<!--
+
 <input id="name" placeholder="name" [(ngModel)]="company.name"/>
 <br>
-<button (click)="submitMethod()" routerLink="/companies">
+<button (click)="add()">
   <span> Submit </span>
 </button> 
--->
 
+
+<!--
   <form [formGroup]="companyAddFormGroup">
     <div class="form-group">
       <label class="center-block">Name:
@@ -18,9 +19,10 @@
     </div>
   </form>
 
-  <p>Form value: {{ companyAddFormGroup.value | json }}</p> 
+  <p>Form value: {{ companyAddFormGroup.value }}</p> 
 
-<button [disabled]="!companyAddFormGroup.valid" (click)="submitMethod()" routerLink="/companies">
+<button [disabled]="!companyAddFormGroup.valid" (click)="submitMethod()">
   <span> Submit </span>
 </button>
+-->
 

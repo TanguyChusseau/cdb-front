@@ -16,18 +16,17 @@ export class CompanyAddComponent implements OnInit {
   constructor(private companyService: CompanyService, private route: ActivatedRoute, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit() {
-   this.createForm();
+   //this.createForm();
    //this.add();
   }
 
+add() {
+  this.companyService.addCompany(this.company)
+      .subscribe(() => this.router.navigate(['companies']),
+          error => console.error(error));
+}
 
-//add() {
-//  this.companyService.addCompany(this.company)
-//      .subscribe(() => this.router.navigate(['Companies']),
-//          error => console.error(error));
-//}
-
-
+/*
   submitMethod(): void{
     const obj = this.companyAddFormGroup.value;
     console.log(obj);
@@ -44,5 +43,6 @@ export class CompanyAddComponent implements OnInit {
       name: ['', Validators.required]
     });
 }
+*/
 
 }
