@@ -23,7 +23,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'update',
+    path: 'companies/update/:id',
     component: CompanyUpdateComponent,
     pathMatch: 'full'
   },
