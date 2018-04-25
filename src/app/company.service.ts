@@ -1,12 +1,17 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Company } from './model/company.model';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class CompanyService {
 
   private companyUrl = 'http://localhost:8080/web/companies';
+
+  const;
+httpOptions = {
+headers: new HttpHeaders({'Content-Type': 'application/json'})
+};
 
   constructor(private http: HttpClient) {
   }
@@ -23,8 +28,8 @@ export class CompanyService {
     return this.http.post<Company>(this.companyUrl, JSON.stringify(company));
   }
 
-  public updateCompany(id: number, company: Company): Observable<any> {
-    return this.http.put(`${ this.companyUrl }/${ id }`, JSON.stringify(company));
+  public updateCompany(company: Company): Observable<Company> {
+    return this.http.put<Company>(this.companyUrl, company, this.httpOptions);
   }
 
   public deleteCompany(id: number): Observable<Company> {
