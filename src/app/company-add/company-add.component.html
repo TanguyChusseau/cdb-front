@@ -1,3 +1,26 @@
 <p>
   company-add works!
 </p>
+
+<!--
+<input id="name" placeholder="name" [(ngModel)]="company.name"/>
+<br>
+<button (click)="submitMethod()" routerLink="/companies">
+  <span> Submit </span>
+</button> 
+-->
+
+  <form [formGroup]="companyAddFormGroup">
+    <div class="form-group">
+      <label class="center-block">Name:
+        <input class="form-control" formControlName="name">
+      </label>
+    </div>
+  </form>
+
+  <p>Form value: {{ companyAddFormGroup.value | json }}</p> 
+
+<button [disabled]="!companyAddFormGroup.valid" (click)="submitMethod()" routerLink="/companies">
+  <span> Submit </span>
+</button>
+
