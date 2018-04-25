@@ -1,5 +1,7 @@
-<mat-card *ngIf="company" class="card-container">
+<div *ngIf="company" class="card-container">
   <mat-card-title class="title-container">
-    {{company.name}}
+    <div class="button-container">
+      <a routerLink="/companies/{{company.id}}"> {{company.name}} </a>
+    </div>
   </mat-card-title>
-œ</mat-card>
+</div>

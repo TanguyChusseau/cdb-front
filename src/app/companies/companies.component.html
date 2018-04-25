@@ -1,8 +1,8 @@
+<div>
+  <title> Company Database </title>
+</div>
 <mat-list class="main-container" *ngFor="let company of companies">
   <div>
     <app-company [company]="company"></app-company>
-  </div>
-  <div class="button-container">
-    <a routerLink="/companies/{{company.id}}"> More options </a>
   </div>
 </mat-list>

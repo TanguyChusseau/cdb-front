@@ -23,8 +23,4 @@ export class CompaniesComponent implements OnInit {
         error => console.error(error));
   }
 
-  deletedCompany(company: Company) {
-    const companyIndex = this.companies.indexOf(company);
-    this.companies.splice(companyIndex, 1);
-  }
 }
