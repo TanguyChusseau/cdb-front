@@ -1,6 +1,7 @@
 <mat-card *ngIf="company" class="card-container">
   <mat-card-title class="title-container">
-    {{company.name}}
+    <span> Company: </span>
+      {{company.name}}
   </mat-card-title>
   <mat-card-content>
     <ul>
@@ -15,11 +16,11 @@
     </ul>
   </mat-card-content>
   <mat-card-actions class="actions-container">
-    <button mat-button class="button-container">
+    <button mat-icon-button class="button-container">
       <a routerLink="/companies/update/{{company.id}}"> Update </a>
     </button>
-    <button mat-button class="button-container" (click)="deleteCompany()">
-      <span> Delete </span>
+    <button>
+      <i class="material-icons" (click)="deleteCompany()">delete</i>
     </button>
   </mat-card-actions>
 </mat-card>

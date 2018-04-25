@@ -13,13 +13,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'companies/:id',
-    component: CompanyGetByIdComponent,
+    path: 'companies/add',
+    component: CompanyAddComponent,
     pathMatch: 'full'
   },
   {
-    path: 'add',
-    component: CompanyAddComponent,
+    path: 'companies/:id',
+    component: CompanyGetByIdComponent,
     pathMatch: 'full'
   },
   {

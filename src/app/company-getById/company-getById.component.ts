@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../model/company.model';
 import { CompanyService } from '../company.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-company-get-by-id',
