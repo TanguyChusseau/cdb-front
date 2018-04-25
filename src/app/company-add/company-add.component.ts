@@ -11,22 +11,14 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 })
 export class CompanyAddComponent implements OnInit {
 
-  //companyAddFormGroup: FormGroup;
+  companyAddFormGroup: FormGroup;
   company: Company = new Company();
   constructor(private companyService: CompanyService, private route: ActivatedRoute, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit() {
-   //this.createForm();
-   //this.add();
+   this.createForm();
   }
-
-add() {
-  this.companyService.addCompany(this.company)
-      .subscribe(() => this.router.navigate(['companies']),
-          error => console.error(error));
-}
-
-/*
+  
   submitMethod(): void{
     const obj = this.companyAddFormGroup.value;
     console.log(obj);
@@ -43,6 +35,6 @@ add() {
       name: ['', Validators.required]
     });
 }
-*/
+
 
 }
