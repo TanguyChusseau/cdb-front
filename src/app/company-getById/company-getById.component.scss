@@ -5,7 +5,7 @@
 }
 
 .card-container {
-  background-color: #CFD8DC;
+  background-color: #90A4AE;
   height: 130px;
   width: 500px;
   margin-left: auto;
@@ -15,7 +15,7 @@
 }
 
 .title-container {
-  background-color: #607D8B;
+  background-color: #ECEFF1;
   font-size: large;
   height: 30px;
   margin-left: auto;
@@ -55,11 +55,14 @@
 }
 
 .main-title-container {
-  background-color: #CFD8DC;
-  text-align: center;
+  background-color: #90A4AE;
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 550px;
 }
 
 .validation-button-container {

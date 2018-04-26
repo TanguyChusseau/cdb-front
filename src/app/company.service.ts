@@ -6,7 +6,7 @@ import { Company } from './model/company.model';
 @Injectable()
 export class CompanyService {
 
-  private companyUrl = 'http://localhost:8080/web/companies';
+  private companyUrl = 'http://10.0.1.190:8080/web/companies';
 
   const;
 httpOptions = {
