@@ -9,7 +9,7 @@
 <div class="main-container">
   <form [formGroup]="companyAddFormGroup">
     <span class="form-control-container">Enter the company's name</span>
-    <input class="form-control-container" formControlName="name" [(ngModel)]="company.name">
+    <input class="form-control-container" placeholder="Company's Name" formControlName="name" [(ngModel)]="company.name">
   </form>
   <button class="validation-button-container" [disabled]="!companyAddFormGroup.valid" (click)="submitMethod()">
     <i class="material-icons">done</i>

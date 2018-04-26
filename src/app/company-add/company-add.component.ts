@@ -19,7 +19,7 @@ export class CompanyAddComponent implements OnInit {
     this.createForm();
   }
 
-  submitMethod(): void{
+  submitMethod(): void {
     this.companyService.addCompany(this.company)
       .subscribe(() => this.router.navigate(['companies']),
         error => console.error(error));

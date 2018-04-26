@@ -1,12 +1,17 @@
-<h1>
-  Update a company
-</h1>
-<div class="container">
-  <span>Name</span>
-  <div>
-      <input placeholder="Name" [(ngModel)]="company.name">
-  </div>
-  <button (click)="updateCompany()">
+<div>
+  <button class="button-container">
+    <i class="material-icons" routerLink="/companies">home</i>
+  </button>
+  <h1 class="title-container">
+    Update a Company
+  </h1>
+</div>
+<div class="main-container">
+  <form [formGroup]="companyAddFormGroup">
+    <span class="form-control-container">Enter the company's name</span>
+    <input class="form-control-container" placeholder="Company's Name" formControlName="name" [(ngModel)]="company.name">
+  </form>
+  <button class="validation-button-container" (click)="updateCompany()">
     <i class="material-icons">done</i>
   </button>
 </div>
