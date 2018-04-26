@@ -1,30 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { CompanyComponent } from './company/company.component';
 import { CompanyService } from './company.service';
-import { CompanyGetByIdComponent } from './company-getById/company-getById.component';
-import { CompanyGetAllComponent } from './company-getAll/company-getAll.component';
-import { CompanyAddComponent } from './company-add/company-add.component';
-import { CompanyUpdateComponent } from './company-update/company-update.component';
 import { AppRoutingModule } from './/app-routing.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomMaterialModule } from './custom-material/custom-material.module';
+import { HeaderModule } from './header/header.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CompanyModule } from './company/company.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    CompanyComponent,
-    CompanyGetByIdComponent,
-    CompanyGetAllComponent,
-    CompanyAddComponent,
-    CompanyUpdateComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    CustomMaterialModule,
+    HeaderModule,
+    HttpClientModule,
+    AppRoutingModule,
+    CompanyModule,
   ],
   providers: [CompanyService],
   bootstrap: [AppComponent]

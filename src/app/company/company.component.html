@@ -1,3 +1,7 @@
-<p>
-  company works!
-</p>
+<div *ngIf="company" class="card-container">
+  <mat-card-title class="title-container">
+    <div class="button-container">
+      <a style="color: black; text-decoration: none" routerLink="/companies/{{company.id}}"> {{company.name}} </a>
+    </div>
+  </mat-card-title>
+</div>

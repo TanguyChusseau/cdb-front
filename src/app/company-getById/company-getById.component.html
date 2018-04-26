@@ -1,3 +1,26 @@
-<p>
-  company-get-by-id works!
-</p>
+<mat-card *ngIf="company" class="card-container">
+  <mat-card-title class="title-container">
+    <span> Company: </span>
+      {{company.name}}
+  </mat-card-title>
+  <mat-card-content>
+    <ul>
+      <li>
+        <span>ID: </span>
+        {{ company.id }}
+      </li>
+      <li>
+        <span>Name: </span>
+        {{ company.name }}
+      </li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions class="actions-container">
+    <button>
+      <i class="material-icons" routerLink="/companies/update/{{company.id}}">mode_edit</i>
+    </button>
+    <button>
+      <i class="material-icons" (click)="deleteCompany()">delete</i>
+    </button>
+  </mat-card-actions>
+</mat-card>
