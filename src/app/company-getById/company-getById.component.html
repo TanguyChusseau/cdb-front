@@ -24,11 +24,11 @@
     </ul>
   </mat-card-content>
   <mat-card-actions class="actions-container">
-    <button>
-      <i class="material-icons" routerLink="/companies/update/{{company.id}}">mode_edit</i>
+    <button routerLink="/companies/update/{{company.id}}">
+      <i class="material-icons">mode_edit</i>
     </button>
-    <button>
-      <i class="material-icons" (click)="deleteCompany()">delete</i>
+    <button (click)="deleteCompany()">
+      <i class="material-icons">delete</i>
     </button>
   </mat-card-actions>
 </mat-card>
