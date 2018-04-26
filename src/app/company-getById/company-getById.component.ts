@@ -28,5 +28,4 @@ export class CompanyGetByIdComponent implements OnInit {
       .subscribe(() => this.router.navigate(['companies']),
         error => console.error(error));
   }
-
 }

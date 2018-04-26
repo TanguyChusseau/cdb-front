@@ -1,12 +1,14 @@
 <div>
   <h1 class="title-container">
-    <button class="button-container">
-      <i class="material-icons" routerLink="/companies">desktop_mac</i>
+    <button class="button-container" routerLink="/companies">
+      <i class="material-icons">desktop_mac</i>
     </button> Company Database
   </h1>
-  <button class="add-button-container">
-    <i class="material-icons" routerLink="/companies/add">add_circle</i>
-  </button>
+  <h2>
+    <button class="add-button-container" routerLink="/companies/add">
+      <i class="material-icons">add_circle</i>
+    </button>
+  </h2>
 </div>
 <mat-list class="main-container" *ngFor="let company of companies">
   <div>
