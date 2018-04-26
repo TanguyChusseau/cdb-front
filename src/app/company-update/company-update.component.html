@@ -7,10 +7,8 @@
   </h1>
 </div>
 <div class="main-container">
-  <form [formGroup]="companyAddFormGroup">
-    <span class="form-control-container">Enter the company's name</span>
-    <input class="form-control-container" placeholder="Company's Name" formControlName="name" [(ngModel)]="company.name">
-  </form>
+  <span class="form-control-container">Enter the company's name</span>
+  <input class="form-control-container" placeholder="Company's Name" [(ngModel)]="company.name">
   <button class="validation-button-container" (click)="updateCompany()">
     <i class="material-icons">done</i>
   </button>
