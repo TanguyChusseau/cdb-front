@@ -4,15 +4,6 @@
   margin-right: auto;
 }
 
-.button-container {
-  background-color: #90A4AE;
-  border-radius: 3px 3px 0 0;
-  margin-left: auto;
-  margin-right: auto;
-  height: 30px;
-  width: 70px;
-}
-
 .card-container {
   background-color: #CFD8DC;
   height: 130px;
@@ -32,3 +23,50 @@
   padding-top: 7px;
   text-align: center;
 }
+
+.update-field-container {
+  margin-top: 0px;
+}
+
+.button-container {
+  color: #607D8B;
+  margin-top: 1px;
+  height: 40px;
+  width: 40px;
+}
+
+.form-control-container {
+  color: black;
+  font-size: large;
+  height: 30px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.main-container {
+  color: black;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 250px;
+}
+
+.main-title-container {
+  background-color: #CFD8DC;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.validation-button-container {
+  color: #607D8B;
+  height: 40px;
+  width: 40px;
+  margin-left: 80px;
+  margin-top: 15px;
+}
+
